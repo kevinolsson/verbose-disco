@@ -1,4 +1,4 @@
-.hero {
+.heroone-block {
 	background-color: $casa;
 	background-position: center;
 	background-size: cover;
@@ -11,7 +11,7 @@
 		//background-image: url(../images/hero-1@2x.png);
 	}
 
-	.hero-content {
+	.heroone-block-content {
 		@include container;
 		padding-left: 15px;
 		padding-right: 15px;
@@ -25,13 +25,14 @@
 }
 
 @include from(2) {
-	.hero-content {
+	.heroone-block-content {
 		@include rhythm-padding(6);
 	}
 }
 
 @include to(2) {
-	.hero-content {
+	.heroone-block-content {
 		@include rhythm-padding(2);
 	}
 }
+
