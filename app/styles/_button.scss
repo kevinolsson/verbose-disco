@@ -1,0 +1,30 @@
+
+@mixin button-color($color) {
+  &:before {
+    background-color: $color;
+  }
+
+  &:hover {
+    &:before {
+      background-color: darken($color, 5%);
+    }
+  }
+}
+
+button, .button {
+  position: relative;
+  display: inline-block;
+  background: none;
+  line-height: rhythm(1);
+  padding: rhythm(.5) rhythm(1.5);
+  border: none;
+  font-family: $font-serif;
+  color: $white;
+  text-decoration: none;
+  background-color: $fountain-blue;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  text-transform: uppercase;
+  @include button-color($fountain-blue);
+
+}

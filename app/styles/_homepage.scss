@@ -1,0 +1,26 @@
+.hero {
+	background-color: $casa;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: left;
+
+	background-image: url(../images/hero-1.png);
+
+	@include breakpoint($hidpi) {
+		//background-image: url(../images/hero-1@2x.png);
+	}
+
+	.hero-content {
+		@include container;
+		@include rhythm-padding(6);
+		h1,h3 {
+			margin: 0px;
+		}
+		.button {
+			margin-top: 30px;
+		}
+	}
+
+
+}

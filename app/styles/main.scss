@@ -1,134 +1,26 @@
-@import "app/styles/font.scss";
+@import "../../bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "../../bower_components/compass-breakpoint/stylesheets/_breakpoint.scss";
+@import "../../bower_components/modular-scale/stylesheets/_modular-scale.scss";
+@import "../../bower_components/susy/sass/_susy.scss";
+@import "../../bower_components/vertical-rhythms-without-compass/_vertical-rhythms.scss";
+// endbower
 
-// Grid
-$susy: (flow: ltr, math: fluid, output: float, gutter-position: after, container: 960px, container-position: center, columns: 12, gutters: 1 / 4, column-width: false, global-box-sizing: content-box, last-flow: to, debug: (image: hide, color: rgba(#66f, 0.25), output: background, toggle: top right));
+// breakpoint-slicer
+@import "../../bower_components/breakpoint-slicer/stylesheets/breakpoint-slicer/variables";
+@import "../../bower_components/breakpoint-slicer/stylesheets/breakpoint-slicer/helper-functions";
+@import "../../bower_components/breakpoint-slicer/stylesheets/breakpoint-slicer/mixins";
 
-// Breakpoints
-$slicer-breakpoints: 0 640px 1024px 1440px 1920px;
-$hidpi: min-resolution 1.5dppx;
-
-// color
-$big-stone: #1C3040;
-$casa: #2E586C;
-$limed-spruce: #3D525C;
-$bali-hai: #8EA3AB;
-$loblolly: #C9D0D6;
-$fountain-blue: #53A2BF;
-
-// typography
-
-$font-sans-serif: "Open Sans", sans-serif;
-$font-serif: "Montserrat", serif;
-
-// Typography
-$ms-base: 16px;
-$ms-ratio: 1.333;
-$base-font-size: $ms-base;
-$base-line-height-ratio: 1.5;
-$base-line-height: $base-font-size * $base-line-height-ratio;
-
-$body-font-weight: 400;
-$heading-font-weight: 700;
-
-$body-font-color: $big-stone;
-$heading-font-color: $big-stone;
-
-$h1-font-size: ms(4);
-$h1-line-height: $h1-font-size * $base-line-height-ratio;
-$h1-mobile-font-size: ms(2);
-$h1-mobile-line-height: $h1-mobile-font-size * $base-line-height-ratio;
-
-$h2-font-size: ms(3);
-$h2-line-height: $h2-font-size * $base-line-height-ratio;
-$h2-mobile-font-size: ms(1);
-$h2-mobile-line-height: $h2-mobile-font-size * $base-line-height-ratio;
-
-$h3-font-size: ms(1);
-$h3-line-height: $h3-font-size * $base-line-height-ratio;
-$h3-mobile-font-size: ms(1);
-$h3-mobile-line-height: $h3-mobile-font-size * $base-line-height-ratio;
-
-$h4-font-size: ms(1);
-$h4-line-height: $h4-font-size * $base-line-height-ratio;
-$h4-mobile-font-size: ms(1);
-$h4-mobile-line-height: $h4-mobile-font-size * $base-line-height-ratio;
-
-$small-font-size: ms(-1);
-$small-line-height: $small-font-size * $base-line-height-ratio;
+// Normalize
+@import "../../bower_components/normalize-css/normalize";
 
 
-
-@include establish-baseline;
-
-@mixin font-size($size: 0) {
-  font-size: ms($size);
-  line-height: ms($size) * $base-line-height-ratio;
-}
-
-body {
-  font-family: $l;
-  font-size: ms(0);
-  font-weight: $body-font-weight;
-  line-height: $base-line-height;
-  color: $body-font-color;
-}
-
-h1 {
-  font-family: $lobster-font-stack;
-  font-size: $h1-font-size;
-  font-weight: $heading-font-weight;
-  line-height: $h1-line-height;
-  color: $gulf-stream;
-
-  @include at(1) {
-    font-size: $h1-mobile-font-size;
-    line-height: $h1-mobile-line-height;
-  }
-}
-
-h2 {
-  font-family: $lobster-font-stack;
-  font-size: $h2-font-size;
-  font-weight: $heading-font-weight;
-  font-style: italic;
-  line-height: $h2-line-height;
-  color: $gulf-stream;
-
-  @include at(1) {
-    font-size: $h2-mobile-font-size;
-    line-height: $h2-mobile-line-height;
-  }
-}
-
-h3 {
-  font-family: $lato-font-stack;
-  font-size: $h3-font-size;
-  font-weight: $heading-font-weight;
-  line-height: $h3-line-height;
-  color: $gulf-stream;
-
-  @include at(1) {
-    font-size: $h3-mobile-font-size;
-    line-height: $h3-mobile-line-height;
-  }
-}
-
-h4 {
-  font-family: $lato-font-stack;
-  font-size: $h4-font-size;
-  font-weight: $heading-font-weight;
-  line-height: $h4-line-height;
-  color: $fountain-blue;
-
-  @include at(1) {
-    font-size: $h4-mobile-font-size;
-    line-height: $h4-mobile-line-height;
-  }
-}
-small {
-  font-size: $small-font-size;
-  font-weight: $body-font-weight;
-  line-height: $small-line-height;
-}
+// Common
+@import "app/styles/common/font.scss";
+@import "app/styles/common/color.scss";
+@import "app/styles/common/global.scss";
+@import "app/styles/common/typography.scss";
 
 
+@import "app/styles/button.scss";
+@import "app/styles/navigation.scss";
+@import "app/styles/homepage.scss";
