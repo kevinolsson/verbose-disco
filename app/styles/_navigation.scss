@@ -23,7 +23,7 @@ header {
     height: 40px;
     background: url(../images/logo-light.png);
     background-size: cover;
-    margin: 15px 0px;;
+    margin: 15px 15px;
 }
 
 .nav-wrapper {
@@ -40,8 +40,16 @@ header {
   }
 }
 
-.vertical-align-middle {
-  float: right;
+@include from(2) {
+  .vertical-align-middle {
+    float: right;
+  }
+}
+@include to(2) {
+  .logo {
+    position: relative;
+    top: -5px;
+  }
 }
 
 .logo,

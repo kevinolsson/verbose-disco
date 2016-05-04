@@ -13,7 +13,8 @@
 
 	.hero-content {
 		@include container;
-		@include rhythm-padding(6);
+		padding-left: 15px;
+		padding-right: 15px;
 		h1,h3 {
 			margin: 0px;
 		}
@@ -21,6 +22,16 @@
 			margin-top: 30px;
 		}
 	}
+}
 
+@include from(2) {
+	.hero-content {
+		@include rhythm-padding(6);
+	}
+}
 
+@include to(2) {
+	.hero-content {
+		@include rhythm-padding(2);
+	}
 }
