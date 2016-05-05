@@ -1,0 +1,35 @@
+.herotwo-block {
+	.herotwo-block-content {
+		@include container;
+		padding-left: 15px;
+		padding-right: 15px;
+		.service {
+			h5 {
+				margin: 0px;
+				text-transform: uppercase;
+			}
+			img {
+				height: 50px;
+				width: auto;
+				margin: 10px;
+			}
+		}
+	}
+}
+
+@include from(2) {
+	.service {
+		@include rhythm-padding(3);
+		@include span(4 of 12);
+		&:last-child{
+			@include span(4 of 12 last);
+		}
+	}
+
+}
+
+@include to(2) {
+	.herotwo-block-content {
+		padding-top: 30px;
+	}
+}

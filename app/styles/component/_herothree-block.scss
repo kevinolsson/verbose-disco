@@ -1,0 +1,66 @@
+.herothree-block {
+	background: $alabaster;
+
+	.herothree-block-content {
+		@include container;
+		padding-left: 15px;
+		padding-right: 15px;
+		h2,h4 {
+			margin: 0px;
+		}
+		.member {
+			.member-content {
+				img {
+					height: auto;
+					border-radius: 100%;
+					border: 5px solid rgba(201,208,214,0.4);
+				}
+				p {
+					margin: 0px;
+				}
+				h5 {
+					text-transform: uppercase;
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+@include from(2) {
+	.herothree-block-content {
+		@include rhythm-padding(3);		
+	}
+	.member {
+		@include rhythm-padding(2);
+		@include span(3 of 12);
+		&:last-child{
+			@include span(3 of 12 last);
+		}
+		.member-content {
+			padding: 10px;
+			text-align: center;
+		}
+		img {
+			width: 95%;
+			height: auto;
+		}
+	}
+
+}
+
+@include to(2) {
+	.herothree-block-content {
+		padding-top: 30px;
+	}
+	.member {
+		@include rhythm-padding(1);
+		.member-content {
+			text-align: left;
+		}
+		img {
+			width: 50%;
+			height: auto;
+		}
+	}
+}

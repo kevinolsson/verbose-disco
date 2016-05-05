@@ -1,0 +1,60 @@
+.herofour-block {
+	background-color: $casa;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: left;
+
+	background-image: url(../images/hero-2.png);
+
+	.herofour-block-content {
+		@include container;
+		padding-left: 15px;
+		padding-right: 15px;
+		h2,p,h5,a {
+			color: $white;
+		}	
+		h2 {
+			margin: 0px;
+		}
+		.right {
+			h5 {
+				margin: 10px 0px;
+			}
+			.input, textarea {
+				max-width: 250px;
+				width: 100%;
+			  	line-height: rhythm(1.5);
+			  	border-radius: 5px;
+			  	border: none;
+			  	-webkit-appearance: none;
+			  	padding: 5px 10px;
+			}
+			textarea {
+				position: relative;
+				left: -10px;
+			}
+		}
+	}
+}
+
+@include from(2) {
+	.left {
+		@include span(5 of 12);
+		@include rhythm-padding(3);
+	}
+	.right {
+		@include span(5 of 12 last);
+		@include rhythm-padding(3);
+	}
+
+}
+
+@include to(2) {
+	.herofour-block-content {
+		padding-top: 30px;
+	}
+	.right {
+		padding-bottom: 50px;
+	}
+}
