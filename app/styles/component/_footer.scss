@@ -1,0 +1,19 @@
+.footer {
+	background-color: $limed-spruce;
+	.footer-content {
+		@include container;
+		@include rhythm-padding(1);
+	}
+	.scroll {
+		border: 0px;
+	}
+	a, .logo {
+		opacity: 0.5
+	}
+}
+
+@include to(2) {
+	.footer-content {
+		padding-top: 30px;
+	}
+}
